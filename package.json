@@ -1,0 +1,49 @@
+{
+  "name": "Parry_DDoS",
+  "version": "1.0.0",
+  "description": "Node.js security middleware — SQL/XSS/NoSQL injection detection + intelligent rate limiting",
+  "main": "src/middleware/index.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "test": "node tests/index.js",
+    "test:unit": "node -e \"require('./tests/unit/detectors.test'); require('./tests/unit/rateLimiter.test')\"",
+    "test:integ": "node tests/integration/middleware.test.js",
+    "example": "node examples/express-basic.js",
+    "test:http": "node scripts/run-tests.js",
+    "start:test": "node scripts/test-server.js",
+    "format": "prettier --write \"src/**/*.js\"",
+    "format:check": "prettier --check \"src/**/*.js\""
+  },
+  "exports": {
+    ".": {
+      "require": "./src/middleware/index.js",
+      "types": "./types/index.d.ts"
+    },
+    "./core": "./src/core/index.js",
+    "./detectors": "./src/detectors/index.js"
+  },
+  "files": [
+    "src/",
+    "config/",
+    "constants/",
+    "types/",
+    "docs/"
+  ],
+  "keywords": [
+    "security",
+    "middleware",
+    "sql-injection",
+    "xss",
+    "nosql",
+    "rate-limiting",
+    "express"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1"
+  }
+}
