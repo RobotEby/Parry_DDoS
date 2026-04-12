@@ -220,7 +220,7 @@ Parry_DDoS/
 │
 ├── src/
 │   ├── middleware/
-│   │   ├── Parry_DDoS.js     ← Main orchestrator
+│   │   ├── parry_ddos.js     ← Main orchestrator
 │   │   └── index.js          ← Barrel export
 │   │
 │   ├── detectors/
